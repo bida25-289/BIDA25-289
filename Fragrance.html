@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fragrance — Luxoria Beauty</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
     .page-hero { background: linear-gradient(135deg, var(--lavender) 0%, var(--cream) 60%); }
@@ -199,16 +200,13 @@
 
         <article class="product-card">
           <div class="product-image bg-lavender">
-            <img src="images/rose-oud-parfum.svg" alt="Rose &amp; Oud Parfum" />
+            <img src="images/rose-oud-parfum.jpeg" alt="Rose &amp; Oud Parfum" />
             <span class="product-badge">Bestseller</span>
           </div>
           <div class="product-info">
             <h3 class="product-name">Rose &amp; Oud Parfum</h3>
             <p class="product-sub">50ml Eau de Parfum</p>
             <div class="notes-card" aria-label="Fragrance notes">
-              <div class="note-row"><div class="note-dot"></div>Top: Rose, Pink Pepper</div>
-              <div class="note-row"><div class="note-dot mid"></div>Heart: Oud, Jasmine</div>
-              <div class="note-row"><div class="note-dot base"></div>Base: Amber, Musk</div>
             </div>
             <p class="product-price" style="margin-top:10px;">P867</p>
           </div>
@@ -216,16 +214,13 @@
 
         <article class="product-card">
           <div class="product-image bg-gold">
-            <img src="images/midnight-amber.svg" alt="Midnight Amber" />
+            <img src="images/midnight-amber.jpeg" alt="Midnight Amber" />
             <span class="product-badge">New</span>
           </div>
           <div class="product-info">
             <h3 class="product-name">Midnight Amber</h3>
             <p class="product-sub">50ml Eau de Parfum</p>
             <div class="notes-card" aria-label="Fragrance notes">
-              <div class="note-row"><div class="note-dot"></div>Top: Bergamot, Spice</div>
-              <div class="note-row"><div class="note-dot mid"></div>Heart: Amber, Iris</div>
-              <div class="note-row"><div class="note-dot base"></div>Base: Vanilla, Sandalwood</div>
             </div>
             <p class="product-price" style="margin-top:10px;">P934</p>
           </div>
@@ -233,15 +228,12 @@
 
         <article class="product-card">
           <div class="product-image bg-blush">
-            <img src="images/fleur-blanc.svg" alt="Fleur Blanc" />
+            <img src="images/fleur-blanc.jpeg" alt="Fleur Blanc" />
           </div>
           <div class="product-info">
             <h3 class="product-name">Fleur Blanc</h3>
             <p class="product-sub">100ml Eau de Toilette</p>
             <div class="notes-card" aria-label="Fragrance notes">
-              <div class="note-row"><div class="note-dot"></div>Top: Peony, Lemon</div>
-              <div class="note-row"><div class="note-dot mid"></div>Heart: White Musk, Lily</div>
-              <div class="note-row"><div class="note-dot base"></div>Base: Cedarwood, Moss</div>
             </div>
             <p class="product-price" style="margin-top:10px;">P712</p>
           </div>
@@ -249,16 +241,13 @@
 
         <article class="product-card">
           <div class="product-image bg-sage">
-            <img src="images/green-garden.svg" alt="Green Garden" />
+            <img src="images/green-garden.jpeg" alt="Green Garden" />
             <span class="product-badge">New</span>
           </div>
           <div class="product-info">
             <h3 class="product-name">Green Garden</h3>
             <p class="product-sub">75ml Eau de Toilette</p>
             <div class="notes-card" aria-label="Fragrance notes">
-              <div class="note-row"><div class="note-dot"></div>Top: Neroli, Green Tea</div>
-              <div class="note-row"><div class="note-dot mid"></div>Heart: Violet, Herbs</div>
-              <div class="note-row"><div class="note-dot base"></div>Base: Vetiver, Oakmoss</div>
             </div>
             <p class="product-price" style="margin-top:10px;">P645</p>
           </div>
@@ -266,7 +255,7 @@
 
         <article class="product-card">
           <div class="product-image bg-lavender">
-            <img src="images/velvet-iris.svg" alt="Velvet Iris" />
+            <img src="images/velvet-iris.jpeg" alt="Velvet Iris" />
           </div>
           <div class="product-info">
             <h3 class="product-name">Velvet Iris</h3>
@@ -277,7 +266,7 @@
 
         <article class="product-card">
           <div class="product-image bg-gold">
-            <img src="images/warm-sandalwood.svg" alt="Warm Sandalwood" />
+            <img src="images/warm-sandalwood.jpeg" alt="Warm Sandalwood" />
           </div>
           <div class="product-info">
             <h3 class="product-name">Warm Sandalwood</h3>
@@ -288,7 +277,7 @@
 
         <article class="product-card">
           <div class="product-image bg-blush">
-            <img src="images/luxury-mist-set.svg" alt="Luxury Mist Set" />
+            <img src="images/luxury-mist-set.jpeg" alt="Luxury Mist Set" />
           </div>
           <div class="product-info">
             <h3 class="product-name">Luxury Mist Set</h3>
@@ -299,7 +288,7 @@
 
         <article class="product-card">
           <div class="product-image bg-deep" style="background:var(--deep);color:#fff;">
-            <img src="images/discovery-gift-set.svg" alt="Discovery Gift Set" />
+            <img src="images/discovery-gift-set.jpeg" alt="Discovery Gift Set" />
             <span class="product-badge">Gift</span>
           </div>
           <div class="product-info">
@@ -351,37 +340,56 @@
 
   <!-- Site Footer -->
   <footer>
-    <div class="footer-grid">
+    <div class="container-lg">
+      <div class="row g-5 mb-5">
+        <!-- Brand Column -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <a href="index.html" class="logo d-block">LUXORIA <span>BEAUTY</span></a>
+            <p>Your destination for timeless beauty. Curated products that enhance your natural radiance.</p>
+          </div>
+        </div>
 
-      <div class="footer-brand">
-        <a href="index.html" class="logo">LUXORIA <span>BEAUTY</span></a>
-        <p>Your destination for timeless beauty. Curated products that enhance your natural radiance.</p>
+        <!-- Shop Column -->
+        <div class="col-lg-2 col-md-6">
+          <nav class="footer-col" aria-label="Shop links">
+            <h4>Shop</h4>
+            <div>
+              <a href="Make-Up.html" class="d-block">Make-Up</a>
+              <a href="skincare.html" class="d-block">Skincare</a>
+              <a href="Fragrance.html" class="d-block">Fragrance</a>
+              <a href="Beauty_accessories.html" class="d-block">Accessories</a>
+              <a href="sale.html" class="d-block">Sale</a>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Help Column -->
+        <div class="col-lg-2 col-md-6">
+          <nav class="footer-col" aria-label="Help links">
+            <h4>Help</h4>
+            <div>
+              <a href="#" class="d-block">Delivery Info</a>
+              <a href="#" class="d-block">Returns</a>
+              <a href="#" class="d-block">Track Order</a>
+              <a href="feedback.html" class="d-block">Contact Us</a>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Social Column -->
+        <div class="col-lg-2 col-md-6">
+          <nav class="footer-col" aria-label="Social media links">
+            <h4>Follow Us</h4>
+            <div>
+              <a href="#" class="d-block">Instagram</a>
+              <a href="#" class="d-block">TikTok</a>
+              <a href="#" class="d-block">Facebook</a>
+              <a href="#" class="d-block">Pinterest</a>
+            </div>
+          </nav>
+        </div>
       </div>
-
-      <nav class="footer-col" aria-label="Shop links">
-        <h4>Shop</h4>
-        <a href="Make-Up.html">Make-Up</a>
-        <a href="skincare.html">Skincare</a>
-        <a href="Fragrance.html">Fragrance</a>
-        <a href="Beauty_accessories.html">Accessories</a>
-      </nav>
-
-      <nav class="footer-col" aria-label="Help links">
-        <h4>Help</h4>
-        <a href="#">Delivery Info</a>
-        <a href="#">Returns</a>
-        <a href="#">Track Order</a>
-        <a href="feedback.html">Contact Us</a>
-      </nav>
-
-      <nav class="footer-col" aria-label="Social media links">
-        <h4>Follow Us</h4>
-        <a href="#">Instagram</a>
-        <a href="#">TikTok</a>
-        <a href="#">Facebook</a>
-        <a href="#">Pinterest</a>
-      </nav>
-
     </div>
     <div class="footer-bottom">&copy; 2026 Luxoria Beauty &nbsp;·&nbsp; All rights reserved</div>
   </footer>
@@ -395,5 +403,6 @@
     });
   </script>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
