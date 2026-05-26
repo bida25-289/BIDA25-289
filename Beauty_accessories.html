@@ -5,9 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beauty Accessories — Luxoria Beauty</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
+    .page-hero { background: linear-gradient(135deg, var(--gold) 0%, var(--cream) 60%); }
+    .page-hero h1 em { color: var(--gold-deep); }
+    .page-hero-eyebrow { color: var(--gold-deep); }
 
+    .editorial-banner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin: 0 60px 60px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .editorial-visual {
+      background: linear-gradient(135deg, var(--gold), #f0e8cc);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 12px; padding: 60px;
+      min-height: 320px;
+    }
+    .editorial-content {
+      background: var(--deep);
+      padding: 60px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .editorial-content .about-eyebrow {
+      font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold-deep); margin-bottom: 14px;
+    }
+    .editorial-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px; font-weight: 300; color: var(--gold);
+      line-height: 1.3; margin-bottom: 16px;
+    }
+    .editorial-content p {
+      color: rgba(255,255,255,0.55); font-size: 14px; line-height: 1.8; margin-bottom: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .editorial-banner { grid-template-columns: 1fr; margin: 0 24px 40px; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+    }
   </style>
 </head>
 <body>
@@ -88,7 +128,7 @@
 
         <article class="product-card">
           <div class="product-image bg-rose">
-            <img src="images/rose-gold-compact-mirror.jpg" alt="Rose Gold Compact Mirror" />
+            <img src="images/rose-gold-compact-mirror.jpeg" alt="Rose Gold Compact Mirror" />
             <span class="product-badge">New</span>
           </div>
           <div class="product-info">
@@ -100,7 +140,7 @@
 
         <article class="product-card">
           <div class="product-image bg-sage">
-            <img src="images/gua-sha-stone.jpg" alt="Gua Sha Stone" />
+            <img src="images/gua-sha-stone.jpeg" alt="Gua Sha Stone" />
           </div>
           <div class="product-info">
             <h3 class="product-name">Gua Sha Stone</h3>
@@ -111,7 +151,7 @@
 
         <article class="product-card">
           <div class="product-image bg-lavender">
-            <img src="images/jade-facial-roller.jpg" alt="Jade Facial Roller" />
+            <img src="images/jade-facial-roller.jpeg" alt="Jade Facial Roller" />
           </div>
           <div class="product-info">
             <h3 class="product-name">Jade Facial Roller</h3>
@@ -122,7 +162,7 @@
 
         <article class="product-card">
           <div class="product-image bg-gold">
-            <img src="images/luxe-makeup-bag.jpg" alt="Luxe Makeup Bag" />
+            <img src="images/luxe-makeup-bag.jpeg" alt="Luxe Makeup Bag" />
             <span class="product-badge">New</span>
           </div>
           <div class="product-info">
@@ -134,7 +174,7 @@
 
         <article class="product-card">
           <div class="product-image bg-blush">
-            <img src="images/beauty-sponge-trio.jpg" alt="Beauty Sponge Trio" />
+            <img src="images/beauty-sponge-trio.jpeg" alt="Beauty Sponge Trio" />
           </div>
           <div class="product-info">
             <h3 class="product-name">Beauty Sponge Trio</h3>
@@ -145,7 +185,7 @@
 
         <article class="product-card">
           <div class="product-image bg-gold">
-            <img src="images/sonic-cleansing-device.jpg" alt="Sonic Cleansing Device" />
+            <img src="images/sonic-cleansing-device.jpeg" alt="Sonic Cleansing Device" />
           </div>
           <div class="product-info">
             <h3 class="product-name">Sonic Cleansing Device</h3>
@@ -207,37 +247,56 @@
 
   <!-- Site Footer -->
   <footer>
-    <div class="footer-grid">
+    <div class="container-lg">
+      <div class="row g-5 mb-5">
+        <!-- Brand Column -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <a href="index.html" class="logo d-block">LUXORIA <span>BEAUTY</span></a>
+            <p>Your destination for timeless beauty. Curated products that enhance your natural radiance.</p>
+          </div>
+        </div>
 
-      <div class="footer-brand">
-        <a href="index.html" class="logo">LUXORIA <span>BEAUTY</span></a>
-        <p>Your destination for timeless beauty. Curated products that enhance your natural radiance.</p>
+        <!-- Shop Column -->
+        <div class="col-lg-2 col-md-6">
+          <nav class="footer-col" aria-label="Shop links">
+            <h4>Shop</h4>
+            <div>
+              <a href="Make-Up.html" class="d-block">Make-Up</a>
+              <a href="skincare.html" class="d-block">Skincare</a>
+              <a href="Fragrance.html" class="d-block">Fragrance</a>
+              <a href="Beauty_accessories.html" class="d-block">Accessories</a>
+              <a href="sale.html" class="d-block">Sale</a>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Help Column -->
+        <div class="col-lg-2 col-md-6">
+          <nav class="footer-col" aria-label="Help links">
+            <h4>Help</h4>
+            <div>
+              <a href="#" class="d-block">Delivery Info</a>
+              <a href="#" class="d-block">Returns</a>
+              <a href="#" class="d-block">Track Order</a>
+              <a href="feedback.html" class="d-block">Contact Us</a>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Social Column -->
+        <div class="col-lg-2 col-md-6">
+          <nav class="footer-col" aria-label="Social media links">
+            <h4>Follow Us</h4>
+            <div>
+              <a href="#" class="d-block">Instagram</a>
+              <a href="#" class="d-block">TikTok</a>
+              <a href="#" class="d-block">Facebook</a>
+              <a href="#" class="d-block">Pinterest</a>
+            </div>
+          </nav>
+        </div>
       </div>
-
-      <nav class="footer-col" aria-label="Shop links">
-        <h4>Shop</h4>
-        <a href="Make-Up.html">Make-Up</a>
-        <a href="skincare.html">Skincare</a>
-        <a href="Fragrance.html">Fragrance</a>
-        <a href="Beauty_accessories.html">Accessories</a>
-      </nav>
-
-      <nav class="footer-col" aria-label="Help links">
-        <h4>Help</h4>
-        <a href="#">Delivery Info</a>
-        <a href="#">Returns</a>
-        <a href="#">Track Order</a>
-        <a href="feedback.html">Contact Us</a>
-      </nav>
-
-      <nav class="footer-col" aria-label="Social media links">
-        <h4>Follow Us</h4>
-        <a href="#">Instagram</a>
-        <a href="#">TikTok</a>
-        <a href="#">Facebook</a>
-        <a href="#">Pinterest</a>
-      </nav>
-
     </div>
     <div class="footer-bottom">&copy; 2026 Luxoria Beauty &nbsp;·&nbsp; All rights reserved</div>
   </footer>
@@ -251,5 +310,6 @@
     });
   </script>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
